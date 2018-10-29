@@ -4,7 +4,7 @@ Neural quality estimation toolkit which can be used for natural language generat
 
 The source code is repository was used in this paper: "Neural Quality Estimation Models for Grammatical Error Correction" (EMNLP 2018).
 
-If you use this code for your work, please cite this paper:
+If you use this code for your work, please cite this [paper](http://aclweb.org/anthology/D18-1274):
 ```
 @InProceedings{chollampatt2018neuqe,
     title = {Neural Quality Estimation of Grammatical Error Correction},

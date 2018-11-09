@@ -65,6 +65,7 @@ python train_estimator.py \
     -opt adam -lrate 0.0005 -bsize 32 -validbsize 1 -do 0.5 -nepochs 50 \
     -metrics pc mae rmse -outdir $EST_MODEL_OUT_DIR
 ```
+The GEC system used for generating system hypotheses for training the EMNLP-2018 GEC QE system was a multilayer convolutional sequence-to-sequence model trained on Lang-8 ([code](https://github.com/nusnlp/mlconvgec2018)). The downstream GEC system that was improved using QE scores also used the same underlying architecture with additional techniques described in the [paper](http://aclweb.org/anthology/D18-1274).
 
 ## Testing
 

@@ -152,8 +152,6 @@ parser.add_argument('-hsuf', '--hypothesis-suffix', required=True,  help='extens
 parser.add_argument('-scoresuf', '--scores-suffix', required=True,  help='extension suffix of scores file.')
 parser.add_argument('-pmodel','--predictor-model', required=False, help='path to trained predictor model.')
 parser.add_argument('-qvectype', '--quality-vector-type', default='pre', help='type of quality vector (pre|post|prepost)')
-parser.add_argument('-svocab', '--source-vocab-path', help='path to source vocab file used for Predictor.')
-parser.add_argument('-tvocab', '--target-vocab-path', help='path to target vocab file used for Predictor.')
 parser.add_argument('-saveall', '--save-after-epochs', action='store_true', help='flag to enable saving after every epoch (default: save the best model only)')
 parser.add_argument('-nosave', '--no-save-best', action='store_true', help='flag to disable saving best model.')
 parser.add_argument('-outdir', '--output-dir', required=True, help='path to output directory')

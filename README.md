@@ -18,8 +18,8 @@ If you use this code for your work, please cite this [paper](http://aclweb.org/a
 ```
 
 ## Prerequisites
-Python 3
-PyTorch 0.3
+* Python 3
+* PyTorch 0.3
 
 ## Training
 

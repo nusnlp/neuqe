@@ -77,7 +77,7 @@ parser.add_argument('-ssuf', '--source-suffix',  required=True, help='extension 
 parser.add_argument('-hsuf', '--hypothesis-suffix', required=True,  help='extension suffix of hypothesis part.')
 parser.add_argument('-scoresuf', '--scores-suffix', required=True, help='extension suffix of ref/output scores file.')
 parser.add_argument('-pemodel','--pred-est-model', dest='pemodels', nargs='*', action='append', required=True,  help='paths to trained predictor-estimator model (format: /path/to/pred_model /path/to/est_model)')
-parser.add_argument('-metrics', nargs='+', help='space separated metrics to evaluate on, e.g pc,mae,mse (requires scikit)')
+parser.add_argument('-metrics', nargs='+', help='space separated metrics to evaluate on, e.g pc,mae,rmse (requires scikit)')
 parser.add_argument('-outdir', '--output-dir', required=True, help='path to output directory')
 parser.add_argument('-gm', '--geometric-mean', action='store_true', help='flag to average ensemble by geometric mean')
 parser.add_argument('-debug', action='store_true', help='flag to enable debugging by training only single batch')

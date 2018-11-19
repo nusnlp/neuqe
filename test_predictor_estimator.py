@@ -76,7 +76,7 @@ parser.add_argument('-test', '--test-prefix', nargs='+', required=True,  help='p
 parser.add_argument('-ssuf', '--source-suffix',  required=True, help='extension suffix of source part.')
 parser.add_argument('-hsuf', '--hypothesis-suffix', required=True,  help='extension suffix of hypothesis part.')
 parser.add_argument('-scoresuf', '--scores-suffix', required=True, help='extension suffix of ref/output scores file.')
-parser.add_argument('-emodel','--estimator-model', dest='pemodels', nargs='*', action='append', required=True,  help='path to trained estimator model (format, <optional-pred model path1 > ... <optional-pred-model pathN> est-model path) ')
+parser.add_argument('-pemodel','--pred-est-model', dest='pemodels', nargs='*', action='append', required=True,  help='paths to trained predictor-estimator model (format: /path/to/pred_model /path/to/est_model)')
 parser.add_argument('-metrics', nargs='+', help='space separated metrics to evaluate on, e.g pc,mae,mse (requires scikit)')
 parser.add_argument('-outdir', '--output-dir', required=True, help='path to output directory')
 parser.add_argument('-gm', '--geometric-mean', action='store_true', help='flag to average ensemble by geometric mean')

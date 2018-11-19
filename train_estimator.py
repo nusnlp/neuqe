@@ -166,8 +166,8 @@ parser.add_argument('-bsize','--batchsize', type=int, default=32, help='batch si
 parser.add_argument('-validbsize','--valid-batchsize', type=int, default=32, help='batch size for validation on validation set')
 parser.add_argument('-testbsize','--test-batchsize', type=int, default=1, help='batch size for validation on test set(s)')
 parser.add_argument('-nhid','--num-hidden-units', type=int, default=100, help='size of hidden units')
-parser.add_argument('-loss', default='mse', help='loss function to optimize (mse|pcorrel|mae)')
-parser.add_argument('-metrics', nargs='+', help='space separated metrics to evaluate on, e.g pc,mae,mse (requires scikit and sklearn)')
+parser.add_argument('-loss', default='mse', help='loss function to optimize (mse|mae)')
+parser.add_argument('-metrics', nargs='+', help='space separated metrics to evaluate on, e.g pc,mae,rmse (requires scikit and sklearn)')
 
 
 ## training parameters

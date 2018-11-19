@@ -233,20 +233,20 @@ args.source_vocab_size = src_vocab.vocab_size
 args.target_vocab_size = trg_vocab.vocab_size
 
 # validating predictor
-if args.predictor_model:
-    logger.info('validating predictor on predictor validation set.')
-    pred_src_validset_path = pred_args.valid_prefix + '.' + pred_args.source_suffix
-    pred_trg_validset_path = pred_args.valid_prefix + '.' + pred_args.target_suffix
-    pred_validset_reader = ParallelReader(source_dataset_path=pred_src_validset_path,
-                                        target_dataset_path=pred_trg_validset_path,
-                                        num_batches_in_cache=None,
-                                        source_max_length=pred_args.max_source_length,
-                                        target_max_length=pred_args.max_target_length,
-                                        batchsize=pred_args.valid_batchsize,
-                                        shuffle_batches=False)
+#if args.predictor_model:
+#    logger.info('validating predictor on predictor validation set.')
+#    pred_src_validset_path = pred_args.valid_prefix + '.' + pred_args.source_suffix
+#    pred_trg_validset_path = pred_args.valid_prefix + '.' + pred_args.target_suffix
+#    pred_validset_reader = ParallelReader(source_dataset_path=pred_src_validset_path,
+#                                        target_dataset_path=pred_trg_validset_path,
+#                                        num_batches_in_cache=None,
+#                                        source_max_length=pred_args.max_source_length,
+#                                        target_max_length=pred_args.max_target_length,
+#                                        batchsize=pred_args.valid_batchsize,
+#                                        shuffle_batches=False)
 
-    valid_loss  = predictor_trainer.run_validation(pred_model, pred_validset_reader, (src_vocab, trg_vocab), debug=False)
-    logger.info("validation loss = %.4f" % valid_loss)
+#    valid_loss  = predictor_trainer.run_validation(pred_model, pred_validset_reader, (src_vocab, trg_vocab), debug=False)
+#    logger.info("validation loss = %.4f" % valid_loss)
 
 
 # loading training set

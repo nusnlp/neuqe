@@ -1,3 +1,4 @@
+
 # NeuQE (Neural Quality Estimation)
 
 Neural quality estimation toolkit which can be used for natural language generation tasks such as grammatical error correction, machine translation, simplification, and summarization.
@@ -17,9 +18,8 @@ If you use this code for your work, please cite this [paper](http://aclweb.org/a
 ```
 
 ## Prerequisites
-1. Python 3.5 or 3.6
-2. PyTorch v4.0
-
+Python 3
+PyTorch 0.3
 
 ## Training
 
@@ -49,7 +49,6 @@ python train_predictor.py -train $TRAIN_PATH_PREFIX -valid $VALID_PATH_PREFIX -s
 
 ```
 
-
 ### Training the estimator model
 
 To train the estimator model, use the script `train_estimator.py`. See the available options by using the `--help` flag.
@@ -77,9 +76,11 @@ python test_predictor_estimator.py \
     -ssuf src -hsuf hyp -scoresuf $SCORE_SUFFIX \
     -pemodel $PRED_MODEL_PATH $EST_MODEL_PATH -metrics pc rmse -outdir $OUT_DIR
 ```
-If you want to use multiple estimators while testing, use multiple `-pemodel` flags specifying the path to each predictor-estimator model.
+If you want to use multiple estimators while testing, use multiple `-pemodel` flags specifying the paths to each predictor-estimator model pair.
 
+## Pre-trained Models
 
+For downloading the pre-trained models used for quality estimation of grammatical error correction for EMNLP 2018 paper, run the `download_models.sh` script inside `examples/gec_emnlp18/` directory.
 
 ## License
 

@@ -13,10 +13,10 @@ curl -L -o models/rnn_predictor/model.best.pt $MODEL_DIR_URL/rnn_predictor/model
 
 # downloading HTER estimators
 for emodel in RR CR CC RC; do
-    curl -L o models/hter.$emodel.pt $MODEL_DIR_URL/hter.$emodel.pt
+    curl -L -o models/hter.$emodel.pt $MODEL_DIR_URL/hter.$emodel.pt
 done
 
 # downloading M2 estimators
 for emodel in RR CR CC RC; do
-    curl -L o models/m2scores.$emodel.pt $MODEL_DIR_URL/m2scores.$emodel.pt
+    curl -L -o models/m2scores.$emodel.pt $MODEL_DIR_URL/m2scores.$emodel.pt
 done

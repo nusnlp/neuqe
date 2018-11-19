@@ -75,9 +75,10 @@ To test the estimator model, use the script `test_predictor_estimator`. An examp
 python test_predictor_estimator.py \
     -test $QE_TEST_DATA_PATH_PREFIX \
     -ssuf src -hsuf hyp -scoresuf $SCORE_SUFFIX \
-    -emodel $EST_MODEL_PATH -metrics pc rmse -outdir $OUT_DIR
+    -pemodel $PRED_MODEL_PATH $EST_MODEL_PATH -metrics pc rmse -outdir $OUT_DIR
 ```
-If you want to use multiple estimators while testing, use multiple `-emodel` flags specifying the path to each model.
+If you want to use multiple estimators while testing, use multiple `-pemodel` flags specifying the path to each predictor-estimator model.
+
 
 
 ## License
